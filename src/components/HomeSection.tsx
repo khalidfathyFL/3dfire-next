@@ -26,8 +26,7 @@ const HomeSection: React.FC = () => {
             <p>Try our MicroBIM Fire add-in tool that provides all you need for pipe modelling, shop drawings documentation and pipe fabrication.</p>
           </div>
           <div className={styles.ctaButtons}>
-            <a href="https://www.microbim.net/" className={styles.primaryBtn} target="_blank" rel="noopener noreferrer">Request a Trial</a>
-            <Link href="/services" className={styles.secondaryBtn}>Learn More</Link>
+            <a href="https://www.microbim.net/" className={styles.secondaryBtn} target="_blank" rel="noopener noreferrer">Request a Trial</a>
           </div>
         </div>
       </div>
