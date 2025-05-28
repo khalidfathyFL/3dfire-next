@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import styles from '../styles/ToolsSection.module.css';
+import styles from '@/styles/ToolsSection.module.css';
 
 const ToolsSection: React.FC = () => {
   return (

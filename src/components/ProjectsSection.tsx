@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import styles from '../styles/ProjectsSection.module.css';
+import styles from '@/styles/ProjectsSection.module.css';
 
 interface ProjectItem {
   id: number;

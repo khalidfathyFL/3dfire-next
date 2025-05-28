@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from '../styles/ContactSection.module.css';
+import styles from '@/styles/ContactSection.module.css';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({

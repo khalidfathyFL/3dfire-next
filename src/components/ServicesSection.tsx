@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import styles from '../styles/ServicesSection.module.css';
+import styles from '@/styles/ServicesSection.module.css';
 
 interface ServiceItem {
   title: string;

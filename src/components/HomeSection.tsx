@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../styles/HomeSection.module.css';
+import styles from '@/styles/HomeSection.module.css';
 
 const HomeSection: React.FC = () => {
   return (
