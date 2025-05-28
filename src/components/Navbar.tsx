@@ -119,7 +119,7 @@ const Navbar = () => {
         <div className={styles.navbarBrand}>
           <Link href="/" className={styles.brandLogo}>
             <Image 
-              src="/images/logo.png" 
+              src={process.env.NODE_ENV === 'production' ? '/3dfire-next/images/logo.png' : '/images/logo.png'} 
               alt="3DFire Design" 
               width={200} 
               height={50}

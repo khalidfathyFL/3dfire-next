@@ -10,7 +10,7 @@ const HomeSection: React.FC = () => {
     <section className={styles.homeSection}>
       <div className={styles.backgroundImage}>
         <Image 
-          src="/images/slide-2.jpg" 
+          src={process.env.NODE_ENV === 'production' ? '/3dfire-next/images/slide-2.jpg' : '/images/slide-2.jpg'} 
           alt="3D Fire Design Background" 
           fill 
           priority 
