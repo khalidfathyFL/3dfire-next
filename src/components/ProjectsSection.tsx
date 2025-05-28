@@ -112,7 +112,7 @@ const ProjectsSection: React.FC = () => {
             <div key={project.id} className={styles.projectCard}>
               <div className={styles.projectImageContainer}>
                 <Image 
-                  src={project.image} 
+                  src={process.env.NODE_ENV === 'production' ? `/3dfire-next${project.image}` : project.image} 
                   alt={project.title}
                   width={600}
                   height={400}
