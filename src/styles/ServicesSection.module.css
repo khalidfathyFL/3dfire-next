@@ -1,0 +1,101 @@
+.servicesSection {
+  padding: 80px 0;
+  background-color: var(--white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:global(html.dark-mode) .servicesSection {
+  background-color: var(--background-dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionTitle {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+:global(html.dark-mode) .sectionTitle {
+  color: var(--secondary-color);
+}
+
+.sectionSubtitle {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sectionSubtitle:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #e74c3c;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCard {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+:global(html.dark-mode) .serviceCard {
+  background-color: var(--card-bg-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+}
+
+.serviceCard h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+:global(html.dark-mode) .serviceCard h3 {
+  color: var(--white);
+}
+
+.serviceCard p {
+  color: var(--text-light);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+:global(html.dark-mode) .serviceCard p {
+  color: var(--text-light-dark-mode);
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}

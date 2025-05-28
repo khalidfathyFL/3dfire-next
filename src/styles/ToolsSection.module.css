@@ -1,0 +1,95 @@
+.toolsSection {
+  padding: 80px 0;
+  background-color: var(--background-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:global(html.dark-mode) .toolsSection {
+  background-color: var(--background-dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionTitle {
+  color: #e74c3c;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.sectionSubtitle {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sectionSubtitle:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #e74c3c;
+}
+
+.toolsContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.toolsContent p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.highlight {
+  color: #e74c3c;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.highlight:hover {
+  color: #c0392b;
+  text-decoration: underline;
+}
+
+.tutorialLink {
+  margin-top: 2rem;
+}
+
+.tutorialButton {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.tutorialButton:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .toolsContent p {
+    font-size: 1rem;
+  }
+}
