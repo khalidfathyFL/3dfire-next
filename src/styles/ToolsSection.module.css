@@ -55,6 +55,11 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
+  transition: color 0.3s ease;
+}
+
+:global(html.dark-mode) .toolsContent p {
+  color: #d1d1d1;
 }
 
 .highlight {
@@ -81,11 +86,20 @@
   border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:global(html.dark-mode) .tutorialButton {
+  background-color: #d63031;
+  color: #f5f5f5;
 }
 
 .tutorialButton:hover {
   background-color: #c0392b;
+}
+
+:global(html.dark-mode) .tutorialButton:hover {
+  background-color: #b71c1c;
 }
 
 @media (max-width: 768px) {

@@ -23,7 +23,7 @@ const ToolsSection: React.FC = () => {
           
           <div className={styles.tutorialLink}>
             <Link href="https://www.microbim.net/PipeFabTutorial.html" className={styles.tutorialButton} target="_blank">
-              View PipeFab Tutorial
+              MicroBIM Tutorials
             </Link>
           </div>
         </div>
