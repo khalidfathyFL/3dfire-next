@@ -97,7 +97,28 @@ const ProjectsSection: React.FC = () => {
       year: '2014',
       image: '/images/13-UTS-Thomas-Street-2014.jpg',
       description: 'Fire system design for an educational institution.',
-    }
+    },
+    {
+      id: 13,
+      title: 'Campbelltown Hospital',
+      year: '2014',
+      image: '/images/14-Campbelltown-Hospital-2014.jpg',
+      description: 'Fire system design for a hospital.',
+    },
+    {
+      id: 14,
+      title: 'Interim Exhibition Centre',
+      year: '2013',
+      image: '/images/15-Interim-Exhibition-Centre-2013.jpg',
+      description: 'Fire system design for an exhibition centre.',
+    },
+    {
+      id: 15,
+      title: 'The Darling Exchange',
+      year: '2017-2018',
+      image: '/images/02-The-Darling-Exchange-2017-2018-V2.jpg',
+      description: 'Specialized fire suppression system for a unique architectural landmark.',
+    },
   ];
 
   return (
