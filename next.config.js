@@ -1,11 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
+  trailingSlash: true,
   images: {
-    domains: ['placehold.co'],
-    unoptimized: true,
-    path: '/3dfire-next/_next/image',
+    unoptimized: true, // ✅ Needed for static export
+    domains: ['placehold.co'], // ✅ Include any image domains you use
     remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        pathname: '/**',
+      },
       {
         protocol: 'https',
         hostname: 'khalidfathyfl.github.io',
@@ -13,10 +19,6 @@ const nextConfig = {
       },
     ],
   },
-  output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/3dfire-next' : '',
-  trailingSlash: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/3dfire-next' : '',
-}
+};
 
 module.exports = nextConfig;
