@@ -91,6 +91,13 @@ const Navbar = () => {
     }
   
     const cleanHref = href.replace('/#', '');
+  
+    if (cleanHref === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.history.pushState(null, '', '/#home');
+      return;
+    }
+  
     const targetElement = document.getElementById(cleanHref);
   
     if (targetElement) {
