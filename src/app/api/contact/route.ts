@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     console.log('------------------------');
     console.log(`From: ${name} (${email})`);
     console.log(`Phone: ${phone || 'Not provided'}`);
-    console.log(`To: ${recipient || 'khalid.fathy@microbim.com'}`);
+    console.log(`To: ${recipient || 'design@3dfire.com.au'}`);
     console.log('Message:');
     console.log(message);
     console.log('------------------------');
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       { 
         success: true, 
-        message: 'Message received successfully! In a production environment, this would be emailed to khalid.fathy@microbim.com' 
+        message: 'Message received successfully! In a production environment, this would be emailed to design@3dfire.com.au' 
       },
       { status: 200 }
     );

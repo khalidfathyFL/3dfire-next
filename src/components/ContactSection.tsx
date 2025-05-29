@@ -42,7 +42,7 @@ const ContactSection: React.FC = () => {
       const body = `Name: ${formData.name}\n\nEmail: ${formData.email}\n\nPhone: ${formData.phone || 'Not provided'}\n\nMessage:\n${formData.message}`;
       
       // Create the mailto URL
-      const mailtoLink = `mailto:khalid.fathy@microbim.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoLink = `mailto:design@3dfire.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       
       // Open the user's default email client
       window.open(mailtoLink, '_blank');
@@ -67,7 +67,7 @@ const ContactSection: React.FC = () => {
         submitting: false,
         submitted: false,
         error: true,
-        message: 'There was an error preparing your message. Please email us directly at khalid.fathy@microbim.com.'
+        message: 'There was an error preparing your message. Please email us directly at design@3dfire.com.au.'
       });
     }
   };
@@ -84,7 +84,7 @@ const ContactSection: React.FC = () => {
               <div className={styles.infoIcon}>📍</div>
               <div className={styles.infoText}>
                 <h4>Address</h4>
-                <p>Suite 3.02, 55 Miller Street, Pyrmont NSW 2009</p>
+                <p>PO Box 84, West Pennant Hills, NSW 2125</p>
               </div>
             </div>
             
@@ -92,7 +92,7 @@ const ContactSection: React.FC = () => {
               <div className={styles.infoIcon}>📞</div>
               <div className={styles.infoText}>
                 <h4>Phone</h4>
-                <p>+61 2 8004 5471</p>
+                <p>+61(0) 414 228 443</p>
               </div>
             </div>
             
@@ -100,7 +100,7 @@ const ContactSection: React.FC = () => {
               <div className={styles.infoIcon}>✉️</div>
               <div className={styles.infoText}>
                 <h4>Email</h4>
-                <p>khalid.fathy@microbim.com</p>
+                <p>design@3dfire.com.au</p>
               </div>
             </div>
           </div>
