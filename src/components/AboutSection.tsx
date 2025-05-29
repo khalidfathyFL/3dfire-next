@@ -31,7 +31,7 @@ const AboutSection: React.FC = () => {
           </div>
           <div className={styles.aboutImage}>
             <Image 
-              src={process.env.NODE_ENV === 'production' ? '/3dfire-next/images/slide-2.jpg' : '/images/slide-2.jpg'}
+              src="/images/slide-2.jpg"
               alt="3D Fire Design Team"
               width={500}
               height={400}
