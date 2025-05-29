@@ -4,17 +4,19 @@ const nextConfig = {
   images: {
     domains: ['placehold.co'],
     unoptimized: true,
-    path: '/_next/image', // ✅ Default path
+    path: '/3dfire-next/_next/image',
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'khalidfathyfl.github.io', // ✅ Optional, can remove if not using remote GitHub-hosted images
+        hostname: 'khalidfathyfl.github.io',
         pathname: '/3dfire-next/**',
       },
     ],
   },
   output: 'export',
+  basePath: process.env.NODE_ENV === 'production' ? '/3dfire-next' : '',
   trailingSlash: true,
-};
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/3dfire-next' : '',
+}
 
 module.exports = nextConfig;
