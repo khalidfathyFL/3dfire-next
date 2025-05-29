@@ -84,37 +84,23 @@ const Navbar = () => {
   
   const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    
-    // Close mobile menu if open
+  
     if (isMobileMenuOpen) {
       setIsMobileMenuOpen(false);
       document.body.style.overflow = 'auto';
     }
-    
-    // Remove basePath for internal processing
-    const cleanHref = href.replace(basePath, '');
-    
-    // Handle home link
-    if (cleanHref === '/' || cleanHref === '/#home') {
-      window.location.href = `${basePath}/`;
-      return;
-    }
-    
-    // Handle anchor links
-    const targetId = cleanHref.replace('/#', '');
-    const targetElement = document.getElementById(targetId);
-    
+  
+    const cleanHref = href.replace('/#', '');
+    const targetElement = document.getElementById(cleanHref);
+  
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
-      
-      // Update URL with correct basePath
-      const newUrl = `${basePath}/#${targetId}`;
-      window.history.pushState(null, '', newUrl);
+      window.history.pushState(null, '', `/#${cleanHref}`);
     } else {
-      // If element doesn't exist yet, navigate to the URL with basePath
       window.location.href = href;
     }
   };
+  
 
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
@@ -188,22 +174,22 @@ const Navbar = () => {
           </button>
           
           <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.open : ''}`}>
-            <a href={`${basePath}/#home`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `${basePath}/#home`)}>
+            <a href={`/#home`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `/#home`)}>
               {navLabels.home}
             </a>
-            <a href={`${basePath}/#about`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `${basePath}/#about`)}>
+            <a href={`/#about`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `/#about`)}>
               {navLabels.about}
             </a>
-            <a href={`${basePath}/#services`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `${basePath}/#services`)}>
+            <a href={`/#services`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `/#services`)}>
               {navLabels.services}
             </a>
-            <a href={`${basePath}/#projects`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `${basePath}/#projects`)}>
+            <a href={`/#projects`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `/#projects`)}>
               {navLabels.projects}
             </a>
-            <a href={`${basePath}/#tools`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `${basePath}/#tools`)}>
+            <a href={`/#tools`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `/#tools`)}>
               {navLabels.tools}
             </a>
-            <a href={`${basePath}/#contact`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `${basePath}/#contact`)}>
+            <a href={`/#contact`} className={styles.navLink} onClick={(e) => handleNavLinkClick(e, `/#contact`)}>
               {navLabels.contact}
             </a>
           </div>
